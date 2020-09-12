@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body {
+    background-image: url(../img/Nature1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.card .profile img {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    margin-top: 5%;
+    object-fit: cover;
+    object-position: center;
+    padding-top: 5px;
+}
+
+.card {
+    width: 100%;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.isi-profile {
+    padding: 30px;
+}
+
+h1,
+p {
+    color: wheat;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.biodata {
+    text-align: left;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.profile img:hover {
+    transform: scale(1.5, 1.5);
+    transition: all 3s ease-in-out;
+}
+
+@media screen and (max-width:540px) {
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (min-width:1366px) {}
+
+@media screen and (max-width: 1980px) {}
