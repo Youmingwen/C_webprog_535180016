@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        body {
+            background-image: url('Pink1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .card {
+            width: 100%;
+            height: fit-content;
+            margin: auto;
+            border-radius: 5px;
+            border: 5px solid palevioletred;
+            background-color: pink;
+            position: relative;
+            text-align: center;
+            padding: 50px;
+        }
+
+        table tr td {
+            text-align: center;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .button {
+            border-radius: 5px;
+            border: 2px solid palevioletred;
+            justify-content: center;
+            font-size: 16px;
+            display: inline-block;
+            padding: 16px;
+            margin: 5px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="tabel">
+            <table>
+                <tr>
+                    <td>Bil 1</td>
+                    <td><input type="text" id="inp1"></td>
+                </tr>
+                <tr>
+                    <td>Bil 2</td>
+                    <td><input type="text" id="inp2"></td>
+                </tr>
+                <tr>
+                    <td>Hasil</td>
+                    <td><input type="text" id="hasil"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="operasi">
+            <button class="button" onclick="ftambah()">+</button>
+            <button class="button" onclick="fkurang()">-</button>
+            <button class="button" onclick="fkali()">x</button>
+            <button class="button" onclick="fbagi()">/</button>
+            <button class="button" onclick="fclear()">C</button>
+        </div>
+    </div>
+
+    <script>
+        var inp1 = document.getElementById("inp1");
+        var inp2 = document.getElementById("inp2");
+        var hasil = document.getElementById("hasil");
+
+        function ftambah() {
+            hasil.value = Number(inp1.value) + Number(inp2.value);
+        }
+
+        function fkurang() {
+            hasil.value = Number(inp1.value) - Number(inp2.value);
+        }
+
+        function fkali() {
+            hasil.value = Number(inp1.value) * Number(inp2.value);
+        }
+
+        function fbagi() {
+            hasil.value = Number(inp1.value) / Number(inp2.value);
+        }
+
+        function fclear() {
+            document.getElementById("hasil").value = "";
+            document.getElementById("inp2").value = "";
+            document.getElementById("inp1").value = "";
+        }
+    </script>
+
+</html>
