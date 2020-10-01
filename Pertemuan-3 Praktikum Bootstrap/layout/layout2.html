@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Layout grid  media query bootstrap</title>
+
+<style>
+
+    .warna {
+        background-color: bisque;
+       
+    }
+/*xs*/
+    @media (max-width: 575px){
+        .warna {
+            background-color:green;
+            
+        }
+    }
+/*sm*/
+    @media (min-width: 576px) and (max-width: 767px){
+        .warna {
+            background-color: indigo;
+            
+        }
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="container-fluid warna">Test</div>
+
+    <div class="container-fluid">
+        <div class="row tinggi">
+            <div class="col orange">
+                kolom 1
+            </div>
+            <div class="col biru">
+                kolom 2
+            </div>
+            <div class="w-100"></div>
+            <div class="col orange">
+                kolom 3
+            </div>
+            <div class="col biru">
+                kolom 4
+            </div>
+            
+        </div>
+    </div>
+
+    
+  
+    
+</body>
+</html>

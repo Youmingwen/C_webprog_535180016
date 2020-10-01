@@ -1,0 +1,38 @@
+
+.con {
+    background-color: red;
+}
+
+body{
+    background: url(img/geometric.jpg) no-repeat center center fixed ;
+    background-size: cover;
+
+}
+
+.judul{
+    color: white;
+    margin-top: 20%;
+    text-align: center;
+    font-size: 75px;
+    letter-spacing: -.05em;
+    line-height: 1.2em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.gmbr{
+    height:100px ;
+    width: 200px;
+}
+
+.tinggi {
+    height: 200px;
+
+}
+
+.biru{
+    background-color: blue;
+}
+
+.orange{
+    background-color: orange;
+}
