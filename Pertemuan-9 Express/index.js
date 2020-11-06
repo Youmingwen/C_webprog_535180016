@@ -19,6 +19,9 @@ app.listen(3000)
 /*
 Install Express:
 $ npm install express
+$ cd "Pertemuan-9 Express"
+$ npm init
+-> Cukup Enter sampai selesai
 */
 
 /*
