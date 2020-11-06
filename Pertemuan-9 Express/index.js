@@ -17,6 +17,11 @@ app.use(express.static('public'));
 app.listen(3000)
 
 /*
+Install Express:
+$ npm install express
+*/
+
+/*
 Install Nodemon:
 $ npm install -g nodemon
 $ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
