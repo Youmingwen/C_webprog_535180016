@@ -1,18 +1,25 @@
-const { response } = require('express');
+const { request } = require('express');
 const express = require('express');
 
 const path = require('path');
+
+const routes = require('./routes');
+const feedbackService = require('./services/FeedbackService');
 
 const app = express();
 
 const port = 3000;
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
+
 app.use(express.static(path.join(__dirname, './static')));
 
-app.get('/',(request, response) => {
-    //response.send("Hello World Express");
-    response.sendFile(path1.join(__dirname, './static/index.html'));
-});
+app.use('/', routes(
+    {
+        feedbackService,
+    }
+));
 
 app.listen(port, () => {
     console.log(`Express Server Berjalan Pada Port ${port}`);
