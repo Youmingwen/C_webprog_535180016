@@ -21,3 +21,6 @@ app.listen(port, () => {
 //Install eslint
 //npm install eslint -D
 //npx eslint --init
+//Setelah selesai npm install -D prettier eslint-config-prettier eslint-config-plugin
+//Jika ada Error mungkin plugin sudah terinstall
+//npm install -D prettier eslint-config-prettier
