@@ -24,3 +24,6 @@ app.listen(port, () => {
 //Setelah selesai npm install -D prettier eslint-config-prettier eslint-config-plugin
 //Jika ada Error mungkin plugin sudah terinstall
 //npm install -D prettier eslint-config-prettier
+
+//Install ejs
+//npm install ejs
