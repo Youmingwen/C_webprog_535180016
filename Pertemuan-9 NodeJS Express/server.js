@@ -17,3 +17,7 @@ app.get('/',(request, response) => {
 app.listen(port, () => {
     console.log(`Express Server Berjalan Pada Port ${port}`);
 });
+
+//Install eslint
+//npm install eslint -D
+//npx eslint --init
