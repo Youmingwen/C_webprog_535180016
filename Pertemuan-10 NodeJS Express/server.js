@@ -1,4 +1,7 @@
 const express = require('express');
+const MongbClient = require('mongodb').MongoClient;
+
+const url = "mongodb://127.0.0.1:27017/db-untar-cafe";
 
 const path = require('path');
 const cookieSession = require('cookie-session');
@@ -8,6 +11,7 @@ const FeedbackService = require('./services/FeedbackService');
 const feedbackService = new FeedbackService('./data/feedback.json');
 
 const routes = require('./routes');
+const { MongoClient } = require('mongodb');
 
 const app = express();
 
@@ -37,3 +41,15 @@ app.use(
 app.listen(port, () => {
   console.log(`express server listening on port ${port}! `);
 });
+
+MongoClient.connect(url, function(err, db){
+  if(err){
+    throw err;
+  }
+  else{
+    console.log("database mongodb terkoneksi");
+  }
+  db.close;
+}) 
+  
+
