@@ -7,9 +7,9 @@ module.exports = (params) => {
 
     const { feedbackService } = params;
 
-    router.get("/", (request, response) => {
+    router.get("/", async (request, response) => {
         //response.send(`Ini Halaman Feedback`)
-        const feedback = feedbackService.getList();
+        const feedback = await feedbackService.getList();
         return response.json(feedback);
     });
     return router;
