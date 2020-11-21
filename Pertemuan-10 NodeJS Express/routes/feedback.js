@@ -1,10 +1,16 @@
 const express = require("express");
+//const FeedbackService = require("../services/FeedbackService");
 
 const router = express.Router();
 
-module.exports = () => {
+module.exports = (params) => {
+
+    const { feedbackService } = params;
+
     router.get("/", (request, response) => {
-        response.send(`Ini Halaman Feedback`)
+        //response.send(`Ini Halaman Feedback`)
+        const feedback = feedbackService.getList();
+        return response.json(feedback);
     });
     return router;
 };
