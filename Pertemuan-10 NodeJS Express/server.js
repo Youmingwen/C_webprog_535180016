@@ -1,6 +1,12 @@
 const { request, response } = require("express");
 const express = require("express");
 
+
+// Modul MongoDB
+// const MongoClient = require('mongodb').MongoClient;
+// const url = "mongodb://127.0.0.1:27017/db-untar-cafe";
+// End MongoDB
+
 const path = require("path");
 const cookieSession = require('cookie-session');
 
@@ -43,3 +49,14 @@ app.use("/", routes(
 app.listen(port, () => {
   console.log(`express server berjalan pada port ${port}`);
 });
+
+// Koneksi Menggunakan Modul MongoDB
+// MongoClient.connect(url, { useUnifiedTopology: true }, function (err, db) {
+//   if(err) {
+//     throw err;
+//   } else {
+//     console.log("Connected!");
+//   }
+//   db.close();
+// })
+// End Koneksi Menggunakan Modul MongoDB
