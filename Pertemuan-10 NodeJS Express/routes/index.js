@@ -2,10 +2,13 @@ const express = require("express");
 
 const materKuliahRoute = require('./materikuliah');
 const feedbackRoute = require('./feedback');
+const memberRoute = require('./member');
 //const { Template } = require("ejs");
 const {request} = require('express');
 
 const router = express.Router();
+
+router.use(express.json());
 
 module.exports = (params) => {
     router.get("/", (request, response) => {
@@ -15,5 +18,6 @@ module.exports = (params) => {
     });
     router.use('/materikuliah', materKuliahRoute());
     router.use('/feedback', feedbackRoute(params));
+    router.use('/member', memberRoute());
     return router;
 };
