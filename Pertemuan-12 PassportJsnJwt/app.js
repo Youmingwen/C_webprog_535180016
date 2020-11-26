@@ -8,14 +8,24 @@ const flash = require("connect-flash");
 
 const session = require("express-session");
 
+const passport = require("passport");
+
 const app = express();
 
 //db config
-
 const db = require("./config/keys").MongoURI;
 
-//connect mongodb
+//passport config
+require("./config/passport")(passport);
 
+//passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+//connect flash
+app.use(flash());
+
+//connect mongodb
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("mongoDB Terkoneksi..."))
@@ -29,7 +39,6 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 
 // express session middleware
-
 app.use(
   session({
     secret: "rahasia",
@@ -41,10 +50,11 @@ app.use(
 //connect flash
 app.use(flash());
 
-// global var
+//global var
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash("success_msg");
   res.locals.error_msg = req.flash("error_msg");
+  res.locals.error = req.flash("error");
   next();
 });
 
